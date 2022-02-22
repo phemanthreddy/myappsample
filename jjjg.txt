@@ -1,0 +1,187 @@
+package javaBasicsAssignment;
+
+import java.util.Scanner;
+public class Assignment1Q1 {
+
+   public static void main(String args[]) {
+      int check, rem, sum = 0;
+      System.out.println("Enter the number:");
+      Scanner n = new Scanner(System.in);
+      int number = n.nextInt();
+      check = number;
+      while(check != 0) {
+         rem = check % 10;
+         sum = sum + (rem * rem * rem);
+         check = check / 10;
+      }
+      
+      if(sum == number)
+         System.out.println("Given number is an armstrong number.");
+      else
+         System.out.println("Given number is not an armstrong number.");
+   }
+}
+
+
+
+
+package javaBasicsAssignment;
+
+public class Assignment1Q2 {
+	public static void main(String[] args) {
+		int check, rem, sum=0,number ;
+		
+		for( number=100; number<1000; ++number) {
+			check=number;
+			
+			 while(check != 0) {
+		         rem = check % 10;
+		         sum = sum + (rem * rem * rem);
+		         check = check / 10;
+		      }
+			 if(sum==number)
+			         System.out.println(number);
+		sum=0;	 		
+		}
+	}
+
+}
+
+
+
+package javaBasicsAssignment;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Assignment1Q3 {
+	public static void main(String[] args) {
+		
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter the Principal Amount");
+		double p = input.nextDouble();
+		System.out.println("The entered Amount is = "+p);
+		System.out.println("Enter the Annual Intrest rate ");
+		double r = input.nextDouble();
+		System.out.println("The entered intrest rate is "+r);
+		System.out.println("Enter the Term of loan in Years");
+		double n = input.nextDouble();
+		System.out.println("The entered Term of loan per year is "+n);
+		System.out.println("Number of years intrest is applied ");
+		double t = input.nextDouble();
+		System.out.println("The Number of years the intrest is applied = "+t);
+		
+		double sum =p*r*n;
+		System.out.println("Your Simple Intrest is =" + sum/100 );
+	
+		double intrest=p*(Math.pow(1+(r/100),t));
+		System.out.println("Your compound intrest is ="+intrest);
+		
+		
+		}
+		
+}
+
+
+
+
+
+package javaBasicsAssignment;
+import java.util.Scanner;
+
+public class Assignment1Q4 {
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in);
+		System.out.println("Enter the the marks of the First subject ");
+		int f=input.nextInt();
+
+		System.out.println("Enter the the marks of the First subject ");
+		int s=input.nextInt();
+	
+		System.out.println("Enter the the marks of the First subject ");
+		int t=input.nextInt();
+
+		if(f>60 && s>60 && t>60) {
+			System.out.println("passed");
+		}
+		if(f+s>60||s+t>60||t+f>60) {
+			System.out.println("promoted");
+		}
+		else if(f>60||s>60||t>60) {
+			System.out.println("failed");
+		}
+		else if(f+s+t<60) {
+			System.out.println("failed");
+		}
+			
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+package javaBasicsAssignment;
+import java.util.Scanner;
+
+public class Assignment1Q5 {
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter the amount of CTC");
+		int ctc = input.nextInt();
+		if(ctc<=180000) {
+			System.out.println("NIL");
+		}
+		else if(ctc>=181001 && ctc<=300000) {
+			System.out.println("10%");
+		}
+		else if(ctc>=300001 && ctc<=500000) {
+			System.out.println("20%");
+		}
+		else if(ctc>=500001 && ctc<=1000000) {
+			System.out.println("30%");
+		}		
+	}
+
+}
+
+
+
+
+
+package javaBasicsAssignment;
+	import java.util.Scanner;
+	public class Assignment1Q6 {
+		public static void main(String[] args) {
+			
+			String userid="hemanth";
+			String password= "phreddy";
+			Scanner input=new Scanner(System.in);
+			int x=0;
+			for (int i = 1; i <= 3; i++) {
+				System.out.println("Enter UserID");
+				String id = input.next();
+				System.out.println("Enter Password");
+				String pass = input.next();
+				
+				if ((id.equals(userid)) && (pass.equals(password))) {
+					System.out.println("Welcome" );
+					break;
+				}	x++;
+}
+	if (x == 3){
+	    System.out.println("Contact Admin");
+			}
+		}
+
+	}
+
+
+
+
+
+
